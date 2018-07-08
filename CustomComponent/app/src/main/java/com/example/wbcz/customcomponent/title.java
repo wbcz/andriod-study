@@ -20,7 +20,7 @@ public class title extends LinearLayout {
     public title(Context context, AttributeSet attrs){
         super(context, attrs);
         //inflate动态加载文件
-        LayoutInflater.from(context).inflate(layout.activity_title, this);
+        LayoutInflater.from(context).inflate(layout.title, this);
         Button back = (Button) findViewById(id.back);
         Button edit = (Button) findViewById(id.edit);
 
