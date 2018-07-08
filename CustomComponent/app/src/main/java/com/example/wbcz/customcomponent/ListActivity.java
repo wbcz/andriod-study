@@ -1,11 +1,12 @@
 package com.example.wbcz.customcomponent;
 
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +37,13 @@ public class ListActivity extends AppCompatActivity {
         FruitAdapter adapter = new FruitAdapter(ListActivity.this, R.layout.fruit_item, fruitList);
         ListView listView = (ListView) findViewById(R.id.list_view);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Fruit fruit = fruitList.get(i);
+                Toast.makeText(ListActivity.this, fruit.getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     public void initFruit() {
