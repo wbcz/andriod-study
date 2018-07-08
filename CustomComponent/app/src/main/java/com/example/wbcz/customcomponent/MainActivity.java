@@ -2,13 +2,12 @@ package com.example.wbcz.customcomponent;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,11 +21,12 @@ public class MainActivity extends AppCompatActivity {
             bar.hide();
         }
 
-        Button bt3 = (Button) findViewById(R.id.bt3);
-        Button bt1 = (Button) findViewById(R.id.bt1);
-        Button bt2 = (Button) findViewById(R.id.bt2);
-        Button bt4 = (Button) findViewById(R.id.bt4);
-        bt3.setOnClickListener(new View.OnClickListener() {
+        Button call = (Button) findViewById(R.id.call);
+        Button sendData = (Button) findViewById(R.id.sendData);
+        Button returnData = (Button) findViewById(R.id.returnData);
+        Button listView = (Button) findViewById(R.id.listView);
+        Button recycleView = (Button) findViewById(R.id.recycleView);
+        call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //显示intent调用
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        bt1.setOnClickListener(new View.OnClickListener() {
+        sendData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent  = new Intent(MainActivity.this, SecondActivity.class);
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //返回上个页面的数据
-        bt2.setOnClickListener(new View.OnClickListener() {
+        returnData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        bt4.setOnClickListener(new View.OnClickListener() {
+        listView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ListActivity.class);
@@ -69,6 +69,17 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+        recycleView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, RecycleActivity.class);
+                startActivity(intent);
+            }
+
+        });
+
+
 
     }
 

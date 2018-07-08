@@ -7,35 +7,35 @@ android:layout_height="match_parent">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerInParent="true"
-    android:text="3"
-    android:id="@+id/bt3"/>
+    android:text="call"
+    android:id="@+id/call"/>
 <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="1"
-    android:id="@+id/bt1"
-    android:layout_above="@+id/bt3"
-    android:layout_toLeftOf="@id/bt3"/>
+    android:text="sendData"
+    android:id="@+id/sendData"
+    android:layout_above="@id/call"
+    android:layout_toLeftOf="@id/call"/>
 
 <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="2"
-    android:id="@+id/bt2"
-    android:layout_above="@id/bt3"
-    android:layout_toRightOf="@id/bt3"/>
+    android:text="returnData"
+    android:id="@+id/returnData"
+    android:layout_above="@id/call"
+    android:layout_toRightOf="@id/call"/>
 <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_below="@id/bt3"
-    android:layout_toLeftOf="@id/bt3"
-    android:id="@+id/bt4"
-    android:text="list"/>
+    android:layout_below="@id/call"
+    android:layout_toLeftOf="@id/call"
+    android:id="@+id/listView"
+    android:text="listView"/>
 <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="5"
-    android:id="@+id/bt5"
-    android:layout_toRightOf="@id/bt3"
-    android:layout_below="@id/bt3"/>
+    android:text="recycleView"
+    android:id="@+id/recycleView"
+    android:layout_toRightOf="@id/call"
+    android:layout_below="@id/call"/>
 </RelativeLayout>
