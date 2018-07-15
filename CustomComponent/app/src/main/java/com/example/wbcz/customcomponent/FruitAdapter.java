@@ -16,11 +16,24 @@ public class FruitAdapter extends ArrayAdapter<Fruit>{
 
     private int resourceId;
 
+    /**
+     * 适配器
+     * @param context
+     * @param textViewResourceId
+     * @param list
+     */
     public FruitAdapter(Context context, int textViewResourceId, List<Fruit> list) {
         super(context, textViewResourceId, list);
         resourceId = textViewResourceId;
     }
 
+    /**
+     * 滚动的时候都会调用getView方法，先渲染布局再绑定数据
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return
+     */
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Fruit fruit = getItem(position);
@@ -41,6 +54,11 @@ public class FruitAdapter extends ArrayAdapter<Fruit>{
         viewHolder.image.setImageResource(fruit.getImageId());
         viewHolder.name.setText(fruit.getName());
         return view;
+    }
+
+    class ViewHolder {
+        public ImageView image;
+        public TextView name;
     }
 
 }
