@@ -1,7 +1,6 @@
 package com.example.wbcz.customcomponent;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
@@ -31,13 +30,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //显示intent调用
                 //Intent intent  = new Intent(MainActivity.this, SecondActivity.class);
+                Intent intent  = new Intent(MainActivity.this, WebviewActivity.class);
                 //隐式调用
                 //Intent intent  = new Intent("com.example.wbcz.customcomponent.ACTION_TT");
                 //其他隐式调用
 //                Intent intent = new Intent(Intent.ACTION_VIEW);
 //                intent.setData(Uri.parse("http://www.baidu.com"));
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:10086"));
+//                Intent intent = new Intent(Intent.ACTION_DIAL);
+//                intent.setData(Uri.parse("tel:10086"));
+                //Intent intent = new Intent("com.example.wbcz.customcomponent.ACTION_WEBVIEW");
                 startActivity(intent);
             }
         });
